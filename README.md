@@ -7,15 +7,15 @@ The results below, each suite README and [SECURITY.md](SECURITY.md) are updated 
 ## Latest results
 
 <!-- results:start -->
-Last run: **2026-10-17** · Kidlat **2.4.0** · Node v24.14.0 · Windows_NT 10.0.26200 x64
+Last run: **2026-10-17** · Kidlat **2.4.0** · Node v24.14.0 · Windows_NT 10.0.26200 x64 · [workflow run](https://github.com/KidlatJS/security/actions/runs/39049768065)
 
 | Suite | Result | Key numbers |
 |---|---|---|
 | [Fuzzing](fuzz/README.md#latest-run) | ✅ pass | 0.5 min, 93,148 cases (seed `12345`), 0 failures |
 | [Smuggling (direct)](request-smuggling/README.md#latest-run) | ✅ pass | 39/39 probes safe |
-| Smuggling (via nginx) | not run | |
+| [Smuggling (via nginx)](request-smuggling/README.md#latest-run) | ✅ pass | 39/39 probes safe |
 | [Soak](soak/README.md#latest-run) | ✅ pass | 0.5 min, 316,010 req (10,534/s), 0 errors, RSS +0 MB |
-| TLS (testssl.sh) | not run | |
+| [TLS (testssl.sh)](tls/README.md#latest-run) | ✅ pass | grade A+ (min A), 0 HIGH/CRITICAL, 0 MEDIUM |
 <!-- results:end -->
 
 ## Reproduce

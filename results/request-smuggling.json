@@ -2,10 +2,10 @@
   "suite": "request-smuggling",
   "environment": {
     "kidlat": "2.4.0",
-    "node": "v24.14.0",
-    "os": "Windows_NT 10.0.26200 x64",
-    "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
-    "date": "2026-10-17T16:08:07.207Z"
+    "node": "v22.23.3",
+    "os": "Linux 6.17.0-1022-azure x64",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "date": "2026-10-17T16:31:36.627Z"
   },
   "passed": true,
   "summary": {

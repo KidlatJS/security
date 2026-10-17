@@ -1,0 +1,20 @@
+{
+  "suite": "tls",
+  "environment": {
+    "kidlat": "2.4.0",
+    "node": "v22.23.3",
+    "os": "Linux 6.17.0-1022-azure x64",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "date": "2026-10-17T16:32:31.066Z"
+  },
+  "passed": true,
+  "summary": {
+    "scanner": "testssl.sh 3.2",
+    "grade": "A+",
+    "minGrade": "A",
+    "capReasons": [],
+    "medium": 0,
+    "highOrCritical": 0
+  },
+  "results": []
+}

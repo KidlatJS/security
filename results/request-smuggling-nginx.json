@@ -1,0 +1,372 @@
+{
+  "suite": "request-smuggling-nginx",
+  "environment": {
+    "kidlat": "2.4.0",
+    "node": "v22.23.3",
+    "os": "Linux 6.17.0-1022-azure x64",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "date": "2026-10-17T16:31:34.912Z"
+  },
+  "passed": true,
+  "summary": {
+    "mode": "via 127.0.0.1:8080",
+    "probes": 39,
+    "passed": 39
+  },
+  "results": [
+    {
+      "name": "CL.TE \"Transfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: xchunked\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: xchunked\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding : chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding : chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding:\\tchunked\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding:\\tchunked\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: chunked\\r\\nTransfer-Encoding: x\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: chunked\\r\\nTransfer-Encoding: x\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: x\\r\\nTransfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: x\\r\\nTransfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: chunked, identity\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: chunked, identity\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: identity, chunked\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: identity, chunked\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding:\\r\\n chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding:\\r\\n chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: CHUNKED\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: CHUNKED\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"Transfer-Encoding: \\\"chunked\\\"\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"Transfer-Encoding: \\\"chunked\\\"\"",
+      "firstResponse": "HTTP/1.1 501 Not Implemented",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \"X: x\\nTransfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \"X: x\\nTransfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.TE \" Transfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "TE.CL \" Transfer-Encoding: chunked\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL.CL conflicting",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL \"+N\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL \"N, N\"",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL hex",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "CL space before colon",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "bare LF line endings",
+      "firstResponse": "HTTP/1.1 200 OK",
+      "executed": [
+        "POST /probe",
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "bare CR in header",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "NUL in header value",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "HTTP/1.0 + chunked",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "chunk size overflow",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "chunk size trailing junk",
+      "firstResponse": "HTTP/1.1 200 OK",
+      "executed": [
+        "POST /probe",
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "chunk ext with bare LF",
+      "firstResponse": "HTTP/1.1 200 OK",
+      "executed": [
+        "POST /probe",
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    },
+    {
+      "name": "chunk data without CRLF",
+      "firstResponse": "HTTP/1.1 400 Bad Request",
+      "executed": [
+        "GET /victim"
+      ],
+      "got": "safe",
+      "passed": true
+    }
+  ]
+}
