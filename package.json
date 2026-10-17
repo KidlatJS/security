@@ -1,0 +1,20 @@
+{
+  "name": "kidlat-security",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "npm run fuzz && npm run smuggling && npm run soak",
+    "fuzz": "node fuzz/fuzz.mjs",
+    "smuggling": "node request-smuggling/probes.mjs",
+    "smuggling:nginx": "node request-smuggling/probes.mjs --via 127.0.0.1:8080 --app-port 3001",
+    "tls:server": "node tls/server.mjs 8443 --ca-out build/testssl/root.pem",
+    "tls:check": "node tls/check-testssl.mjs build/testssl/result.json --min-grade A",
+    "readme": "node scripts/update-readme.mjs"
+  },
+  "dependencies": {
+    "kidlat": "2.4.0"
+  }
+}

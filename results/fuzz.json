@@ -1,0 +1,32 @@
+{
+  "suite": "fuzz",
+  "environment": {
+    "kidlat": "2.4.0",
+    "node": "v24.14.0",
+    "os": "Windows_NT 10.0.26200 x64",
+    "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
+    "date": "2026-10-17T16:22:53.555Z"
+  },
+  "passed": true,
+  "summary": {
+    "seed": 12345,
+    "minutes": 0.5,
+    "iterations": 93148,
+    "regressions": 0,
+    "seconds": 30.052,
+    "casesPerSecond": 3100,
+    "failures": 0,
+    "serverSurvived": true
+  },
+  "statusCounts": {
+    "200": 13498,
+    "400": 68562,
+    "404": 1761,
+    "405": 1444,
+    "414": 244,
+    "501": 973,
+    "505": 1247,
+    "none": 5419
+  },
+  "failures": []
+}

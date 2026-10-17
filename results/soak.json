@@ -1,0 +1,53 @@
+{
+  "suite": "soak",
+  "environment": {
+    "kidlat": "2.4.0",
+    "node": "v24.14.0",
+    "os": "Windows_NT 10.0.26200 x64",
+    "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
+    "date": "2026-10-17T16:05:00.896Z"
+  },
+  "passed": true,
+  "summary": {
+    "seconds": 30,
+    "connections": 50,
+    "requests": 316010,
+    "requestsPerSecond": 10534,
+    "errors": 0,
+    "rssGrowthMB": 0,
+    "heapGrowthMB": 0.4,
+    "peakRssMB": 52.2,
+    "serverSurvived": true
+  },
+  "statusCounts": {
+    "200": 237008,
+    "404": 79002
+  },
+  "samples": [
+    {
+      "t": 0,
+      "rssMB": 52.2,
+      "heapMB": 6.9
+    },
+    {
+      "t": 5,
+      "rssMB": 52.2,
+      "heapMB": 6.4
+    },
+    {
+      "t": 10,
+      "rssMB": 52.2,
+      "heapMB": 7.4
+    },
+    {
+      "t": 15,
+      "rssMB": 52.2,
+      "heapMB": 6.7
+    },
+    {
+      "t": 20,
+      "rssMB": 52.2,
+      "heapMB": 6.8
+    }
+  ]
+}
