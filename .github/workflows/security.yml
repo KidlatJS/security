@@ -34,6 +34,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: rm -rf results
       - if: inputs.kidlat != ''
         run: npm install --no-save kidlat@${{ inputs.kidlat }}
       - run: npm run fuzz
@@ -43,9 +44,12 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: results-fuzz
-          path: |
-            results/
-            fuzz/regressions/
+          path: results/fuzz.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: regressions
+          path: fuzz/regressions/
+          if-no-files-found: ignore
 
   soak:
     runs-on: ubuntu-latest
@@ -57,6 +61,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: rm -rf results
       - if: inputs.kidlat != ''
         run: npm install --no-save kidlat@${{ inputs.kidlat }}
       - run: npm run soak
@@ -64,7 +69,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: results-soak
-          path: results/
+          path: results/soak.json
 
   security:
     name: Smuggling (direct + nginx) and testssl.sh
@@ -77,6 +82,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: rm -rf results
       - if: inputs.kidlat != ''
         run: npm install --no-save kidlat@${{ inputs.kidlat }}
 
@@ -110,9 +116,11 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: results-security
-          path: |
-            results/
-            build/testssl/result.json
+          path: results/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: testssl-raw
+          path: build/testssl/result.json
 
   report:
     needs: [fuzz, soak, security]
@@ -123,7 +131,13 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: results-*
+          path: results/
           merge-multiple: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: regressions
+          path: fuzz/regressions/
+        continue-on-error: true
 
       - name: Update README
         id: readme
