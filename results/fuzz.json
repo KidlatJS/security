@@ -2,31 +2,32 @@
   "suite": "fuzz",
   "environment": {
     "kidlat": "2.4.0",
-    "node": "v24.14.0",
-    "os": "Windows_NT 10.0.26200 x64",
-    "cpu": "Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz",
-    "date": "2026-10-17T16:22:53.555Z"
+    "node": "v22.23.3",
+    "os": "Linux 6.17.0-1022-azure x64",
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "date": "2026-10-18T16:14:47.921Z"
   },
   "passed": true,
   "summary": {
-    "seed": 12345,
-    "minutes": 0.5,
-    "iterations": 93148,
+    "seed": 39135109109,
+    "minutes": 120,
+    "iterations": 34065089,
     "regressions": 0,
-    "seconds": 30.052,
-    "casesPerSecond": 3100,
+    "seconds": 7200.05,
+    "casesPerSecond": 4731,
     "failures": 0,
     "serverSurvived": true
   },
   "statusCounts": {
-    "200": 13498,
-    "400": 68562,
-    "404": 1761,
-    "405": 1444,
-    "414": 244,
-    "501": 973,
-    "505": 1247,
-    "none": 5419
+    "200": 5017384,
+    "400": 24986015,
+    "404": 636659,
+    "405": 540917,
+    "413": 1,
+    "414": 86638,
+    "501": 352975,
+    "505": 470247,
+    "none": 1974253
   },
   "failures": []
 }

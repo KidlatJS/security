@@ -4,8 +4,8 @@
     "kidlat": "2.4.0",
     "node": "v22.23.3",
     "os": "Linux 6.17.0-1022-azure x64",
-    "cpu": "AMD EPYC 7763 64-Core Processor",
-    "date": "2026-10-17T16:31:36.627Z"
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "date": "2026-10-18T14:14:51.241Z"
   },
   "passed": true,
   "summary": {
