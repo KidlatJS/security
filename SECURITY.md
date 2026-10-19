@@ -6,11 +6,11 @@ Results of every suite in this repository, run against the published `kidlat` np
 
 ## Summary
 
-Last run: **2026-10-18** · Kidlat **2.4.0** · Node v22.23.3 · Linux 6.17.0-1022-azure x64 · [workflow run](https://github.com/KidlatJS/security/actions/runs/39135109109)
+Last run: **2026-10-19** · Kidlat **2.4.0** · Node v22.23.3 · Linux 6.17.0-1022-azure x64 · [workflow run](https://github.com/KidlatJS/security/actions/runs/39223040637)
 
 | Suite | Result | Key numbers |
 |---|---|---|
-| [Fuzzing](fuzz/README.md#latest-run) | ✅ pass | 120 min, 34,065,089 cases (seed `39135109109`), 0 failures |
+| [Fuzzing](fuzz/README.md#latest-run) | ✅ pass | 120 min, 32,967,307 cases (seed `39223040637`), 0 failures |
 | [Smuggling (direct)](request-smuggling/README.md#latest-run) | ✅ pass | 39/39 probes safe |
 | [Smuggling (via nginx)](request-smuggling/README.md#latest-run) | ✅ pass | 39/39 probes safe |
 | [Soak](soak/README.md#latest-run) | ✅ pass | 0.5 min, 316,010 req (10,534/s), 0 errors, RSS +0 MB |
@@ -20,31 +20,31 @@ Last run: **2026-10-18** · Kidlat **2.4.0** · Node v22.23.3 · Linux 6.17.0-10
 
 Black-box mutation fuzzing of the HTTP/1.1 parser over raw TCP for 120 minutes. Passes if the server never crashes and every response is well-formed. [Method](fuzz/README.md)
 
-**✅ pass** · 2026-10-18 16:14 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39135109109)
+**✅ pass** · 2026-10-19 10:28 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39223040637)
 
 | Kidlat | Node | OS | CPU |
 |---|---|---|---|
-| 2.4.0 | v22.23.3 | Linux 6.17.0-1022-azure x64 | AMD EPYC 9V45 96-Core Processor |
+| 2.4.0 | v22.23.3 | Linux 6.17.0-1022-azure x64 | AMD EPYC 7763 64-Core Processor |
 
 | Seed | Minutes | Cases | Cases/s | Regressions replayed | Failures | Server survived |
 |---|---|---|---|---|---|---|
-| `39135109109` | 120 | 34,065,089 | 4,731 | 0 | 0 | yes |
+| `39223040637` | 120 | 32,967,307 | 4,579 | 0 | 0 | yes |
 
-Reproduce: `FUZZ_SEED=39135109109 FUZZ_ITERATIONS=34065089 npm run fuzz`
+Reproduce: `FUZZ_SEED=39223040637 FUZZ_ITERATIONS=32967307 npm run fuzz`
 
 **Responses by status**
 
 | Status | Count |
 |---|---|
-| 400 | 24,986,015 |
-| 200 | 5,017,384 |
-| none | 1,974,253 |
-| 404 | 636,659 |
-| 405 | 540,917 |
-| 505 | 470,247 |
-| 501 | 352,975 |
-| 414 | 86,638 |
-| 413 | 1 |
+| 400 | 24,179,941 |
+| 200 | 4,856,203 |
+| none | 1,907,394 |
+| 404 | 617,264 |
+| 405 | 525,159 |
+| 505 | 454,644 |
+| 501 | 343,012 |
+| 414 | 83,687 |
+| 413 | 3 |
 
 No failures.
 
@@ -56,7 +56,7 @@ Raw data: [results/fuzz.json](results/fuzz.json)
 
 ### Smuggling (direct)
 
-**✅ pass** · 2026-10-18 14:14 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39135109109)
+**✅ pass** · 2026-10-19 08:29 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39223040637)
 
 | Kidlat | Node | OS | CPU |
 |---|---|---|---|
@@ -110,7 +110,7 @@ Raw data: [results/request-smuggling.json](results/request-smuggling.json)
 
 ### Smuggling (via nginx)
 
-**✅ pass** · 2026-10-18 14:14 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39135109109)
+**✅ pass** · 2026-10-19 08:29 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39223040637)
 
 | Kidlat | Node | OS | CPU |
 |---|---|---|---|
@@ -166,7 +166,7 @@ Raw data: [results/request-smuggling-nginx.json](results/request-smuggling-nginx
 
 One hour of keep-alive load on 50 connections. Passes with zero errors and under 64 MB memory growth after warmup. [Method](soak/README.md)
 
-**✅ pass** · 2026-10-17 16:05 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39135109109)
+**✅ pass** · 2026-10-17 16:05 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39223040637)
 
 | Kidlat | Node | OS | CPU |
 |---|---|---|---|
@@ -201,7 +201,7 @@ Raw data: [results/soak.json](results/soak.json)
 
 testssl.sh 3.2 against Kidlat serving a root → intermediate → leaf chain. Passes with grade A or better and no HIGH/CRITICAL findings. [Method](tls/README.md)
 
-**✅ pass** · 2026-10-18 14:15 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39135109109)
+**✅ pass** · 2026-10-19 08:29 UTC · [workflow run](https://github.com/KidlatJS/security/actions/runs/39223040637)
 
 | Kidlat | Node | OS | CPU |
 |---|---|---|---|

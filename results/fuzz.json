@@ -4,30 +4,30 @@
     "kidlat": "2.4.0",
     "node": "v22.23.3",
     "os": "Linux 6.17.0-1022-azure x64",
-    "cpu": "AMD EPYC 9V45 96-Core Processor",
-    "date": "2026-10-18T16:14:47.921Z"
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "date": "2026-10-19T10:28:52.621Z"
   },
   "passed": true,
   "summary": {
-    "seed": 39135109109,
+    "seed": 39223040637,
     "minutes": 120,
-    "iterations": 34065089,
+    "iterations": 32967307,
     "regressions": 0,
-    "seconds": 7200.05,
-    "casesPerSecond": 4731,
+    "seconds": 7200.049,
+    "casesPerSecond": 4579,
     "failures": 0,
     "serverSurvived": true
   },
   "statusCounts": {
-    "200": 5017384,
-    "400": 24986015,
-    "404": 636659,
-    "405": 540917,
-    "413": 1,
-    "414": 86638,
-    "501": 352975,
-    "505": 470247,
-    "none": 1974253
+    "200": 4856203,
+    "400": 24179941,
+    "404": 617264,
+    "405": 525159,
+    "413": 3,
+    "414": 83687,
+    "501": 343012,
+    "505": 454644,
+    "none": 1907394
   },
   "failures": []
 }
