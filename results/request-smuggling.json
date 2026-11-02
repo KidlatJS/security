@@ -2,10 +2,10 @@
   "suite": "request-smuggling",
   "environment": {
     "kidlat": "2.4.0",
-    "node": "v22.23.3",
-    "os": "Linux 6.17.0-1022-azure x64",
-    "cpu": "AMD EPYC 9V45 96-Core Processor",
-    "date": "2026-10-26T08:31:13.307Z"
+    "node": "v22.23.4",
+    "os": "Linux 7.0.0-1017-azure x64",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "date": "2026-11-02T10:32:18.378Z"
   },
   "passed": true,
   "summary": {
