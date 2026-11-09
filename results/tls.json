@@ -3,9 +3,9 @@
   "environment": {
     "kidlat": "2.4.0",
     "node": "v22.23.4",
-    "os": "Linux 7.0.0-1017-azure x64",
-    "cpu": "AMD EPYC 7763 64-Core Processor",
-    "date": "2026-11-02T10:33:15.400Z"
+    "os": "Linux 7.0.0-1019-azure x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "date": "2026-11-09T10:54:55.068Z"
   },
   "passed": true,
   "summary": {
